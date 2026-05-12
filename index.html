@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LowBal | Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="top-actions">
+        <button id="dark-mode-btn">
+          <i class="fa-solid fa-moon"></i> Dark Mode
+        </button>
+
+        <button id="export-btn">
+          <i class="fa-solid fa-file-export"></i> Export CSV
+        </button>
+
+        <button id="reset-btn">
+          <i class="fa-solid fa-rotate-left"></i> Reset
+        </button>
+      </div>
+
+      <div class="top-section">
+
+        <div class="card">
+          <h2>Budget</h2>
+
+          <input
+            type="number"
+            id="budget-input"
+            placeholder="Enter Total Budget"
+          />
+          <button id="budget-btn">Set Budget</button>
+
+          <br /><br />
+
+          <h2>Income</h2>
+          <input
+            type="number"
+            id="income-input"
+            placeholder="Enter Income"
+          />
+          <button id="income-btn">Set Income</button>
+        </div>
+
+        <div class="card">
+          <h2>Expenses</h2>
+
+          <input
+            type="text"
+            id="title-input"
+            placeholder="Enter Expense Title"
+          />
+
+          <input
+            type="number"
+            id="amount-input"
+            placeholder="Enter Expense Amount"
+          />
+
+          <select id="category-input">
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Rent">Rent</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+            <option value="Entertainment">Entertainment</option>
+          </select>
+
+          <button id="expense-btn">Add Expense</button>
+        </div>
+      </div>
+
+
+      <div class="filters">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search expenses..."
+        />
+
+        <select id="filter-input">
+          <option value="All">All Categories</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="Rent">Rent</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Entertainment">Entertainment</option>
+        </select>
+      </div>
+
+
+      <p id="alert-box"></p>
+
+
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+
+
+      <div class="summary">
+        <div>
+          <h3>Total Budget</h3>
+          <p id="total-budget">0</p>
+        </div>
+
+        <div>
+          <h3>Total Income</h3>
+          <p id="total-income">0</p>
+        </div>
+
+        <div>
+          <h3>Expenses</h3>
+          <p id="total-expense">0</p>
+        </div>
+
+        <div>
+          <h3>Balance</h3>
+          <p id="balance">0</p>
+        </div>
+      </div>
+
+
+      <div class="expense-card">
+        <h2>Expense List</h2>
+        <div id="expense-list"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
